@@ -23,10 +23,14 @@ def main():
     print( subprocess.check_output(['git', 'commit', '-m', message]))
 
     # create the repo on github
+    # curl -u 'USER' https://api.github.com/user/repos -d '{"name":"REPO"}'
+    # still need to figure out how 2-factor auth/tokens would work...
 
     # git remote add origin URL
+    print( subprocess.check_output(['git', 'remote', 'add', 'origin', github_url]))
 
     # git push origin master
+    print( subprocess.check_output(['git', 'push', 'origin', 'master']))
 
 if __name__ == "__main__":
     main()
