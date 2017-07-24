@@ -13,10 +13,14 @@ def main():
 
     # create a README.md file with the name of the repo,
     # if it doesn't exist already
+    print( subprocess.check_output(['touch', 'README.md']))
 
     # git add .
+    print( subprocess.check_output(['git', 'add', '.']))
 
     # git commit -m "Initial commit"
+    message = "Initial commit"
+    print( subprocess.check_output(['git', 'commit', '-m', message]))
 
     # create the repo on github
 
