@@ -9,7 +9,7 @@ def main():
     repo_name = os.getcwd()
 
     # run git init
-
+    print( subprocess.check_output(['git', 'init']))
 
     # create a README.md file with the name of the repo,
     # if it doesn't exist already
